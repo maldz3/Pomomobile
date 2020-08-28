@@ -1,6 +1,6 @@
-# pomodoro_timer
+# Pomodoro Timer
 
-A new Flutter project.
+An app that allows you to create custom tasks and use a timer to manage the tasks.
 
 ## Getting Started
 
