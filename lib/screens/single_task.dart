@@ -3,7 +3,7 @@ import 'package:pomodoro_timer/models/task.dart';
 import 'package:pomodoro_timer/widgets/custom_drawer.dart';
 import 'package:pomodoro_timer/widgets/one_task.dart';
 
-//Standalone single task page
+
 class SingleTask extends StatelessWidget{
   final Task task;
   SingleTask({Key key, @required this.task}) : super(key:key);

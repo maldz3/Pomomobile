@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro_timer/screens/home_page.dart';
 import 'custom_drawer.dart';
 import 'package:pomodoro_timer/screens/new_task.dart';
 
-//Creates AppBar, EndDrawer and FAB for screens
+
 class TaskScaffold extends StatelessWidget {
   final String appBarTitle;
   final Widget body;
@@ -14,6 +15,12 @@ class TaskScaffold extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             automaticallyImplyLeading: false,
+            leading: GestureDetector(
+              onTap: () { Navigator.popAndPushNamed(context, HomePage.routeName); },
+              child: Icon(
+                Icons.home,  // add custom icons also
+              ),
+            ),
             title: Center(child: Text(appBarTitle)),
             actions: <Widget>[
               Builder(builder: (context) =>

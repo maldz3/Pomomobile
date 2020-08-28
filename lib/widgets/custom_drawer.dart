@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../app.dart';
 
-//Used to help change color mode
+
 class CustomDrawer extends StatefulWidget {
 
   @override
@@ -26,7 +26,7 @@ class _CustomDrawerState extends State<CustomDrawer>{
         child: ListView(children: <Widget>[
           Container(height: 100.0,
               child: DrawerHeader(
-                  child: Center(child: Text('Theme Mode Setting')))),
+                  child: Center(child: Text('Theme Mode')))),
           SwitchListTile(title: Text('Dark Mode'),
               value: _darkOn,
               onChanged: (bool value) {
@@ -35,7 +35,9 @@ class _CustomDrawerState extends State<CustomDrawer>{
                   _curState.prefs.setBool('_darkOn', value);
                   _curState.getTheme();
                 });
-              }
+              },
+              activeTrackColor: Colors.purple[300],
+              activeColor: Colors.purple,
           )
         ],
         ));

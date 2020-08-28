@@ -5,7 +5,7 @@ import 'package:pomodoro_timer/screens/task_list.dart';
 import 'package:pomodoro_timer/widgets/custom_drawer.dart';
 import 'package:pomodoro_timer/db/task_dto.dart';
 
-//New Journal Entry form
+
 class NewTaskForm extends StatefulWidget {
   static const routeName = 'newTask';
 
@@ -45,6 +45,7 @@ class _NewTaskFormState extends State<NewTaskForm> {
                             TextFormField(
                                 initialValue: newTask.name,
                                 autofocus: false,
+                                //keyboardType: TextInputType.number,
                                 textInputAction: TextInputAction.next,
                                 onFieldSubmitted: (_) =>
                                     FocusScope.of(context).nextFocus(),
@@ -75,13 +76,13 @@ class _NewTaskFormState extends State<NewTaskForm> {
                                 onSaved: (value) {
                                   newTask.description = value;
                                 },
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return 'Please enter a description';
-                                  } else {
-                                    return null;
-                                  }
-                                }
+                                // validator: (value) {
+                                //   if (value.isEmpty) {
+                                //     return 'Please enter a description';
+                                //   } else {
+                                //     return null;
+                                //   }
+                                // }
                             ),
                             SizedBox(height: 8),
                             TextFormField(
@@ -182,6 +183,7 @@ class _NewTaskFormState extends State<NewTaskForm> {
                                           final databaseManager = DatabaseManager.getInstance();
                                           databaseManager.saveTask(newTask: newTask);
                                           Navigator.push(context, MaterialPageRoute(builder: (context) => TaskListScreen()));
+                                          //Navigator.popAndPushNamed(context, 'tasks');
                                         }
                                       },
                                       child: Text('Save Entry')

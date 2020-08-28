@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro_timer/screens/home_page.dart';
 import 'package:pomodoro_timer/screens/new_task.dart';
 import 'package:pomodoro_timer/screens/task_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,6 +11,7 @@ class App extends StatefulWidget {
 
   //Routes for all pages that need to be named
   static final routes = {
+    HomePage.routeName: (context) => HomePage(),
     NewTaskForm.routeName: (context) => NewTaskForm(),
     TaskListScreen.routeName: (context) => TaskListScreen()
   };
@@ -50,7 +52,8 @@ class AppState extends State<App> {
         debugShowCheckedModeBanner: false,
         title: 'Pomodoro',
         theme: data,
-        initialRoute: TaskListScreen.routeName,
+        // initialRoute: TaskListScreen.routeName,
+        initialRoute: HomePage.routeName,
         routes: App.routes
     );
   }

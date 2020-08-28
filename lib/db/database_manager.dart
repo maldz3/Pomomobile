@@ -4,6 +4,8 @@ import 'package:pomodoro_timer/models/task.dart';
 
 
 class DatabaseManager {
+  final Database db;
+  static DatabaseManager _instance;
   static const String DB_NAME = 'timer.sqlite3.db';
   static const String SQL_CREATE = 'CREATE TABLE IF NOT EXISTS timer_tasks'
       '(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, '
@@ -15,8 +17,6 @@ class DatabaseManager {
       'VALUES(?, ?, ?, ?, ?, ?);';
   static const String SQL_UPDATE_TIME = 'UPDATE timer_tasks SET totalTime = ? WHERE id = ?';
   static const String SQL_SELECT = 'SELECT * FROM timer_tasks ORDER BY name;';
-  static DatabaseManager _instance;
-  final Database db;
 
   DatabaseManager._({Database database}) : db = database;
 
