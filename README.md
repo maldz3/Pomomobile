@@ -1,16 +1,14 @@
 # Pomodoro Timer
 
-An app that allows you to create custom tasks and use a timer to manage the tasks.
+An app that allows you to create custom tasks and use a timer to manage/complete the tasks and reach a goal.
 
-## Getting Started
+## :hammer: Pmomobile is built with:
+- [Flutter SDK](https://www.flutter.com/)
 
-This project is a starting point for a Flutter application.
+## 🤓 Authors
+- [Maliha Syed](https://github.com/maldz3)
+- [Noah Johnston](https://github.com/NDJ-1701)
+- [Jamie Mott]
+- [Len LaBiondo]
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pomodoro Timer was created for the web as part of a class project at OSU.
