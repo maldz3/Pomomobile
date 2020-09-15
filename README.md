@@ -11,4 +11,5 @@ An app that allows you to create custom tasks and use a timer to manage/complete
 - [Jamie Mott](https://github.com/jamiemott)
 - Len LaBiondo
 
-Pomodoro Timer was created for the web as part of a class project at OSU.
+The Pomodoro Timer was initially created for the web as part of a class project at OSU,
+and reworked into a fully mobile app by Maliha Syed (me).
